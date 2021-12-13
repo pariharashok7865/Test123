@@ -12,11 +12,13 @@ pipeline {
                 /*withSonarQubeEnv(installationName: 'SonarQube', credentialsId: 'SonarQubeToken') {
                     sh "mvn clean package sonar:sonar"
                 }*/
+                echo "scan"
             }
         }       
         stage('Deploy_Nexus') {
             steps {
                  //bat label: '', script: "mvn -f JAVA/my-app/pom.xml clean deploy" 
+                 echo "deploy"
             }
         }
     }
