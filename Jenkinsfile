@@ -11,7 +11,7 @@ pipeline {
         stage('SonarQube analysis') {
             steps {
                 withSonarQubeEnv(installationName: 'SonarQube', credentialsId: 'SonarQubeToken') {
-                    sh "mvn clean package sonar:sonar"
+                    sh "mvn -f my-app/pom.xml clean package sonar:sonar"
                 }
                 //echo "scan"
             }
