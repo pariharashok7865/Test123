@@ -10,7 +10,8 @@ pipeline {
                 script {
                     if(gitchangecheck.gitChange('my-app'))
                     {
-                         echo "Building...."   
+                         sh "mvn -f my-app/pom.xml clean" 
+                         echo "clean working"  
                     }
                     
                 }                                                                               
