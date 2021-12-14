@@ -21,7 +21,7 @@ pipeline {
                 /*withSonarQubeEnv(installationName: 'SonarQube', credentialsId: 'SonarQubeToken') {
                     sh "mvn -f my-app/pom.xml clean package sonar:sonar"
                 }*/
-                //echo "scan"
+                echo "scan"
             }
         }       
         stage('Deploy_Nexus') {
